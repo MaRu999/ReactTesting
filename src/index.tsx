@@ -7,4 +7,4 @@ import 'mobx-react-lite/batchingForReactDom';
 const loader = new ContentLoader(91, 10);
 
 const wrapper = document.getElementById("root");
-wrapper ? ReactDOM.render(<App loader={loader} />, wrapper) : false;
+wrapper ? ReactDOM.render(<App loader={loader}/>, wrapper) : false;

@@ -35,6 +35,6 @@ test('Integration test button clicking', () => {
 });
 
 test('snapshot comp', () => {
-   const snap = render(<App loader={loader}/>);
-   expect(snap).toMatchSnapshot();
+    const snap = render(<App loader={loader}/>);
+    expect(snap).toMatchSnapshot();
 });

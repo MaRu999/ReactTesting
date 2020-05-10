@@ -88,7 +88,7 @@ test('Previous page', () => {
     loader.previousPage();
     expect(loader.curPage).toBe(0);
     const page = loader.getCurrentPage();
-    for(let i=0; i <=9; i++) {
+    for (let i = 0; i <= 9; i++) {
         const num = i + 1;
         expect(page[i]).toBe("Test " + num);
     }
