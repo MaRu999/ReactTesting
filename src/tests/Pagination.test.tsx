@@ -15,11 +15,13 @@ test('Check for p', () => {
 });
 
 test('Check for prev button', () => {
-
     const spy = spyOn(loader, 'previousPage');
     expect(component.find('button.prevBtn').length).toBe(1);
     component.find('button.prevBtn').simulate('click');
     expect(spy).toHaveBeenCalled();
+    component.find('button.prevBtn').simulate('click');
+    component.find('button.prevBtn').simulate('click');
+    expect(spy).toBeCalledTimes(3);
 });
 
 test('Check for next button', () => {
@@ -27,6 +29,11 @@ test('Check for next button', () => {
     expect(component.find('button.nextBtn').length).toBe(1);
     component.find('button.nextBtn').simulate('click');
     expect(spy).toHaveBeenCalled();
+    component.find('button.nextBtn').simulate('click');
+    component.find('button.nextBtn').simulate('click');
+    component.find('button.nextBtn').simulate('click');
+    component.find('button.nextBtn').simulate('click');
+    expect(spy).toBeCalledTimes(5);
 });
 
 
